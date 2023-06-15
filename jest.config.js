@@ -1,7 +1,7 @@
 module.exports = {
     clearMocks: true,
     setupFilesAfterEnv: ['regenerator-runtime/runtime'],
-    testPathIgnorPatterns: [
+    testPathIgnorePatterns: [
         "/node_modules/",
     ]
 }
