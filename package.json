@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/NathanZMacedo/teste-javascript/issues"
   },
-  "homepage": "https://github.com/NathanZMacedo/teste-javascript#readme"
+  "homepage": "https://github.com/NathanZMacedo/teste-javascript#readme",
+  "dependencies": {
+    "jsdom": "^22.1.0",
+    "regenerator-runtime": "^0.13.11"
+  }
 }
