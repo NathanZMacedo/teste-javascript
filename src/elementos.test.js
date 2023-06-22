@@ -1,4 +1,4 @@
-import { getByText} from '@testing-library/dom';
+import { getByText, getByTestId} from '@testing-library/dom';
 import '@testing-library/jest-dom/extend-expect'
 import {JSDOM} from 'jsdom'
 import fs from 'fs'
@@ -22,5 +22,9 @@ describe('testando o index.html', ()=>{
         expect(h1Element).not.toBeNull()
         let textH1 = getByText(container,"Testando Apps")
         expect(textH1).toBeInTheDocument()
+    })
+    it('checando se eu tenho uma tabela',()=>{
+        let tabela = getByTestId(container,"tabela")
+        expect(tabela).toBeInTheDocument()
     })
 })
