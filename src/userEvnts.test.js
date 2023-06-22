@@ -23,17 +23,34 @@ describe('testando o index.html', ()=>{
     })
     describe('input checagem',()=>{
         it('checar se aumenta os itens da tabela',()=>{
-            const botao =  getByText(container,'Clique Aqui!');
+            const botao = getByText(container,'Clique Aqui!');
             const nomeInput = getByTestId(container,'nome-anime');
-            const descInput =  getByTestId(container,'desc-anime');
-
+            const descInput = getByTestId(container,'desc-anime');
+      
             nomeInput.value = "digitei algo"
             descInput.value = "digitei de novo"
-
-            fireEvent.click(botao)
-
-            let qtdTrs = container.quuerySelectorAll('#tbody tr');
-            expect(qtdTrs.length).toBe(1)
-        })
+      
+            fireEvent.click(botao);
+            
+            let qtdTrs = container.querySelectorAll('#tbody tr');
+            console.log(qtdTrs.length)
+            expect(qtdTrs.length).toBe(2)
+      
+            nomeInput.value = "digitei pela segunda vez"
+            descInput.value = "digitei porque quiz"
+      
+            fireEvent.click(botao);
+            
+            qtdTrs = container.querySelectorAll('#tbody tr');
+            expect(qtdTrs.length).toBe(4)
+            
+            nomeInput.value = "digitei pela terceira vez"
+            descInput.value = "digitei porque quiz"
+      
+            fireEvent.click(botao);
+            
+            qtdTrs = container.querySelectorAll('#tbody tr');
+            expect(qtdTrs.length).toBe(6)
+          })
     })
 })
