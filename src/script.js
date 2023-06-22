@@ -16,4 +16,6 @@ function preencher(){
                         <tr>
     `;
     tbody.innerHTML+=tableRow;
+    document.getElementById('nome-anime').value = ''
+    document.getElementById('desc-anime').value = ''
 }
