@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
-    <h1 id="titleapp">Testando Apps</h1>
-    <div class="form">
-        <h1 class="subtitles"></h1>
-        <input type="text" id="nome-anime">
-        <h1 class="subtitles">Descrição</h1>
-        <input type="text" id="desc-anime">
-        <button id="form-button" onclick="preencher()">Clique Aqui!</button>
-    </div>
 
-    <div id="table-container">
-        <table>
-        <thead>
-            <tr>
-                <td>Criação</td>
-                <td>Nome</td>
-                <td>Descrição</td>
-                <td>Deletar</td>
-            </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-    </table>
-    </div>
-    <script src="./script.js"></script>
+    <div id="html">
+        <h1 id="titleapp">Testando Apps</h1>
+        <div class="form">
+            <h1 class="subtitles"></h1>
+            <input type="text" id="nome-anime">
+            <h1 class="subtitles">Descrição</h1>
+            <input type="text" id="desc-anime">
+            <button id="form-button" onclick="preencher()">Clique Aqui!</button>
+        </div>
 
+        <div id="table-container">
+            <table>
+            <thead>
+                <tr>
+                    <td>Criação</td>
+                    <td>Nome</td>
+                    <td>Descrição</td>
+                    <td>Deletar</td>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./elementos.test.js"></script>
+    </div>
 </body>
 </html>
