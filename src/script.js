@@ -9,7 +9,10 @@ function preencher(){
                             <td>${nomeValue}</td>
                             <td>${descValue}</td>
                             <td>
-                                <button>
+                                <button
+                                onclick="deleteItem('${idAtual}')"
+                                class="buttonDelete"
+                                >
                                     Deletar este anime
                                 </button>
                             </td>
@@ -18,4 +21,13 @@ function preencher(){
     tbody.innerHTML+=tableRow;
     document.getElementById('nome-anime').value = ''
     document.getElementById('desc-anime').value = ''
+}
+function deleteItem(uuid){
+    const rows = document.querySelectorAll('#tbody tr');
+    rows.forEach((row)=>{
+        const idCell = row.querySelector('td:first-child');
+        if(idCell.textContent=== uuid){
+        row.remove();
+        }
+    })
 }
